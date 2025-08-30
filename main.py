@@ -17,7 +17,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Correct key!
+    allow_origins=["http://localhost:3000","https://fast-api-learning-57wh.onrender.com/"],  # Correct key!
     allow_methods=["*"],
     allow_headers=["*"],                      # Also important
 )
