@@ -4,7 +4,7 @@ import "./App.css";
 import TaglineSection from "./TaglineSection";
 
 const api = axios.create({
-  baseURL: "https://fast-api-learning-uhxu.onrender.com",
+  baseURL: "https://fast-api-learning-uhxu.onrender.com/",
 });
 
 function App() {
