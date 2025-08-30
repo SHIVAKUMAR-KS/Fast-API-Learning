@@ -3,9 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from models import Product
 from pymongo import MongoClient
 from bson import ObjectId
+from dotenv import load_dotenv
+import os
 
+load_dotenv()  # Loads variables from .env
 # Connect to MongoDB
-client = MongoClient("mongodb+srv://shiva:a99jr8erSMuPbvSv@cluster0.n7eusza.mongodb.net/")
+mongo_uri = os.getenv("MONGO_URI")
+client = MongoClient(mongo_uri)
 db = client["fastapi"]         # Database name
 collection = db["products"]       # Collection name
 
