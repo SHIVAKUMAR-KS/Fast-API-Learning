@@ -17,9 +17,9 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000","https://fast-api-learning.vercel.app"],  # Correct key!
+    allow_origins=["http://localhost:3000","https://fast-api-learning.vercel.app"],  
     allow_methods=["*"],
-    allow_headers=["*"],                      # Also important
+    allow_headers=["*"],    
 )
 
 
@@ -45,7 +45,7 @@ def product_helper(product) -> dict:
 #     return products
 @app.get("/")
 def home():
-    return "Hello JI"
+    return index
 
     
 @app.get("/products")
@@ -133,5 +133,6 @@ def about():
 @app.get("/contact")
 def contact():
     return "This is contact us page"
+
 
 
